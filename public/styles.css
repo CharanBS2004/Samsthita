@@ -1,0 +1,17 @@
+
+body {
+    font-family: "poppins";
+}
+
+h1 {
+    color: #0062ff;
+    font-size: 5em;
+}
+
+.bg-grey{
+    background-color: rgb(238, 236, 236);
+}
+
+.text-lightblue{
+    color: #418aff;
+}
