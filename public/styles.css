@@ -15,3 +15,12 @@ h1 {
 .text-lightblue{
     color: #418aff;
 }
+
+.title {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  letter-spacing: clamp(1px, 0.8vw, 4px);
+}
+
+.text-size {
+  font-size: clamp(3rem, 6vw, 3.5rem);
+}

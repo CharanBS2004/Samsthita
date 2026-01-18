@@ -22,61 +22,63 @@
 </head>
 
 <body>
-  <header>
-    <nav class="navbar navbar-expand-md bg-primary" data-bs-theme="dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-          <img src="Samsthita_Logo.png" alt="Logo" width="150" class="d-inline-block align-text-top">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="aboutus.html">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="courses.html">Courses</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="events.html">Events</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="testimonials.html">Testimonials</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
-            </li>
-          </ul>
-        </div>
+  <nav class="navbar navbar-expand-lg bg-primary mb-5" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="Samsthita_Logo.png" alt="Logo" width="150" class="d-inline-block align-text-top">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="aboutus.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="courses.html">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="events.html">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="testimonials.html">Testimonials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+          </li>
+        </ul>
       </div>
-    </nav>
-  </header>
-  <section class="container-md p-5 px-md-5">
-    <h1 class="text-center p-2" style="letter-spacing: 4px;">SAMSTHITA</h1>
+    </div>
+  </nav>
+  <section class="container-md px-md-5">
+    <h1 class="text-center fw-bold text-size">SAMSTHITA</h1>
     <h5 class="text-end p-1 fst-italic"> - A Student-Driven Coding Community</h5>
     <p class="text-center p-1">“Samsthita is a vibrant student-driven coding club committed to empowering learners with
       real-world technical skills through hands-on projects, collaborative learning, expert mentorship, workshops, and
       continuous innovation, enabling students to confidently bridge the gap between academic knowledge and industry
       expectations.”</p>
-    <div class="container-fluid row row-cols-sm-2 row-cols-1 d-flex justify-content-center justify-content-evenly p-5">
-      <a href="courses.html" class="btn btn-primary px-5 py-2 mb-4 fw-bold col">
-        Explore Courses
-      </a>
-      <a href="events.html" class="btn btn-link px-5 py-2 fw-bold col">
-        Explore Events
-      </a>
+    <div class="row row-cols-sm-2 row-cols-1 justify-content-center justify-content-evenly my-5 ">
+      <div class="col text-center">
+        <a href="courses.html" class="btn btn-primary px-5 py-2 mb-5 fw-bold d-inline-block">
+          Explore Courses
+        </a>
+      </div>
+      <div class="col text-center">
+        <a href="events.html" class="btn btn-link px-5 py-2 fw-bold d-inline-block">
+          Explore Events
+        </a>
+      </div>
 
     </div>
   </section>
 
 
-  <section class="bg-grey p-5">
+  <section class="container-fluid bg-grey py-5">
     <h2 class="text-center p-2 text-lightblue fw-bold pb-5">ABOUT US</h2>
     <div class="row p-2 row-cols-1 row-cols-md-3">
       <div class="col text-center py-3 py-sm-0">
@@ -95,20 +97,22 @@
   </section>
 
 
-  <section class="p-5">
+  <section class="container-fluid py-5 px-3 px-md-5">
     <h2 class="text-center p-2 text-lightblue fw-bold pb-5">COURSES</h2>
-    <div class="row">
-      <div class="col border mx-4">
-        <div class="container-fluid d-flex flex-column py-4">
+    <div class="row gx-4 gy-4">
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="d-flex flex-column py-4 border">
           <span class="badge text-bg-primary py-2 px-4 align-self-end">FREE</span>
-          <div class="container-fluid">
-            <img src="java.png" class="img-fluid my-4 mx-auto d-block my-3" alt="" srcset="">
-          </div>
+
+          <img src="java.png" class="img-fluid my-4 mx-auto d-block" alt="Java">
+
           <h4 class="text-center">JAVA</h4>
+
           <span class="d-flex align-items-center justify-content-center gap-2">
             <i class="bi bi-youtube text-danger fs-3"></i>
-            <span class="mb-0 fs-6">@Telusko</span>
+            <span class="fs-6">@Telusko</span>
           </span>
+
           <div class="text-warning text-center">
             <i class="bi bi-star-fill"></i>
             <i class="bi bi-star-fill"></i>
@@ -116,35 +120,52 @@
             <i class="bi bi-star-half"></i>
             <i class="bi bi-star"></i>
           </div>
-
         </div>
       </div>
-      <div class="col border mx-4">
-        <div class="container-fluid d-flex flex-column py-4">
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="d-flex flex-column py-4 border">
           <span class="badge text-bg-primary py-2 px-4 align-self-end">FREE</span>
-          <div class="container-fluid">
-            <img src="Samsthita_Logo.png" class="img-fluid my-4" alt="" srcset="">
+
+          <img src="java.png" class="img-fluid my-4 mx-auto d-block" alt="Java">
+
+          <h4 class="text-center">JAVA</h4>
+
+          <span class="d-flex align-items-center justify-content-center gap-2">
+            <i class="bi bi-youtube text-danger fs-3"></i>
+            <span class="fs-6">@Telusko</span>
+          </span>
+
+          <div class="text-warning text-center">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            <i class="bi bi-star"></i>
           </div>
         </div>
       </div>
-      <div class="col border mx-4">
-        <div class="container-fluid d-flex flex-column py-4">
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="d-flex flex-column py-4 border">
           <span class="badge text-bg-primary py-2 px-4 align-self-end">FREE</span>
-          <div class="container-fluid">
-            <img src="Samsthita_Logo.png" class="img-fluid my-4" alt="" srcset="">
+
+          <img src="java.png" class="img-fluid my-4 mx-auto d-block" alt="Java">
+
+          <h4 class="text-center">JAVA</h4>
+
+          <span class="d-flex align-items-center justify-content-center gap-2">
+            <i class="bi bi-youtube text-danger fs-3"></i>
+            <span class="fs-6">@Telusko</span>
+          </span>
+
+          <div class="text-warning text-center">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            <i class="bi bi-star"></i>
           </div>
         </div>
       </div>
-      <div class="col border mx-4">
-        <div class="container-fluid d-flex flex-column py-4">
-          <span class="badge text-bg-primary py-2 px-4 align-self-end">FREE</span>
-          <div class="container-fluid">
-            <img src="Samsthita_Logo.png" class="img-fluid my-4" alt="" srcset="">
-          </div>
-        </div>
-      </div>
-
-
     </div>
   </section>
 </body>
