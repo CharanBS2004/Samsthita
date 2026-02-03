@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <div class="card p-4 shadow">
+        <h4 class="text-center mb-3">Admin Login</h4>
+
+        <input type="password"
+               id="admin-password"
+               class="form-control mb-3"
+               placeholder="Enter admin password">
+
+        <button class="btn btn-primary w-100" onclick="loginAdmin()">
+          Login
+        </button>
+
+        <p class="text-danger text-center mt-2" id="error-msg"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="./js/admin.js"></script>
+</body>
+</html>

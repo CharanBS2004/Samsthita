@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+<!-- TOP NAV -->
+<nav class="navbar navbar-dark bg-primary px-3">
+  <span class="navbar-brand fw-bold">Samsthita Admin</span>
+  <button class="btn btn-light btn-sm" onclick="logoutAdmin()">Logout</button>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <!-- SIDEBAR -->
+    <aside class="col-md-3 col-lg-2 bg-white border-end min-vh-100 p-3">
+      <h6 class="fw-bold text-muted mb-3">MANAGE</h6>
+
+      <div class="list-group list-group-flush">
+        <button class="list-group-item list-group-item-action active"
+                onclick="showSection('courses')">Courses</button>
+
+        <button class="list-group-item list-group-item-action"
+                onclick="showSection('events')">Events</button>
+
+        <button class="list-group-item list-group-item-action"
+                onclick="showSection('testimonials')">Testimonials</button>
+
+        <button class="list-group-item list-group-item-action"
+                onclick="showSection('contacts')">Contacts</button>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="col-md-9 col-lg-10 p-4">
+
+      <!-- COURSES -->
+      <section id="courses-section">
+        <h3 class="fw-bold mb-3">Add Course</h3>
+
+        <form id="course-form" class="row g-3">
+          <div class="col-md-6">
+            <input id="c-title" class="form-control" placeholder="Course Title" required>
+          </div>
+
+          <div class="col-md-6">
+            <select id="c-category" class="form-select" required>
+              <option value="">Category</option>
+              <option value="programming">Programming</option>
+              <option value="web">Web</option>
+            </select>
+          </div>
+
+          <div class="col-md-6">
+            <input id="c-creator" class="form-control" placeholder="Creator">
+          </div>
+
+          <div class="col-md-6">
+            <input id="c-platform" class="form-control" placeholder="Platform (youtube, coursera)">
+          </div>
+
+          <div class="col-md-4">
+            <input id="c-rating" type="number" class="form-control" placeholder="Rating (0–5)">
+          </div>
+
+          <div class="col-md-4">
+            <input id="c-price" class="form-control" placeholder="Price (FREE / ₹)">
+          </div>
+
+          <div class="col-md-4">
+            <input id="c-image" class="form-control" placeholder="Image URL">
+          </div>
+
+          <div class="col-12">
+            <button class="btn btn-primary">Save Course</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- EVENTS -->
+      <section id="events-section" class="d-none">
+        <h3 class="fw-bold mb-3">Add Event</h3>
+
+        <form id="event-form" class="row g-3">
+          <div class="col-md-6">
+            <input id="e-title" class="form-control" placeholder="Event Title">
+          </div>
+
+          <div class="col-md-6">
+            <select id="e-category" class="form-select">
+              <option value="workshop">Workshop</option>
+              <option value="seminar">Seminar</option>
+              <option value="competition">Competition</option>
+            </select>
+          </div>
+
+          <div class="col-md-6">
+            <input id="e-date" type="date" class="form-control">
+          </div>
+
+          <div class="col-md-6">
+            <input id="e-audience" class="form-control" placeholder="Audience">
+          </div>
+
+          <div class="col-12">
+            <textarea id="e-desc" class="form-control" rows="3" placeholder="Description"></textarea>
+          </div>
+
+          <div class="col-12">
+            <button class="btn btn-success">Save Event</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section id="testimonials-section" class="d-none">
+        <h3 class="fw-bold mb-3">Add Testimonial</h3>
+
+        <form id="testimonial-form" class="row g-3">
+          <div class="col-md-6">
+            <input id="t-name" class="form-control" placeholder="Name">
+          </div>
+
+          <div class="col-md-6">
+            <input id="t-rating" type="number" class="form-control" placeholder="Rating (0–5)">
+          </div>
+
+          <div class="col-12">
+            <textarea id="t-message" class="form-control" rows="3" placeholder="Message"></textarea>
+          </div>
+
+          <div class="col-12">
+            <button class="btn btn-warning">Save Testimonial</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- CONTACTS -->
+      <section id="contacts-section" class="d-none">
+        <h3 class="fw-bold mb-3">Contact Messages</h3>
+
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead class="table-light">
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Message</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody id="contacts-table">
+              <!-- Firebase data later -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<script src="./js/admin-guard.js"></script>
+<script src="./js/admin-ui.js"></script>
+<script type="module" src="./js/admin-actions.js"></script>
+
+</body>
+</html>
