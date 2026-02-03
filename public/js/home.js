@@ -24,7 +24,7 @@ function getPlatformLogo(platform) {
 }
 
 /* ---------- COURSES ---------- */
-async function loadTopRatedCourses(containerId, limit = 3) {
+async function loadTopRatedCourses(containerId, limit = 5) {
   const container = document.getElementById(containerId);
   if (!container) return;
 
@@ -35,27 +35,32 @@ async function loadTopRatedCourses(containerId, limit = 3) {
 
   topCourses.forEach(course => {
     container.innerHTML += `
-      <div class="col">
+      <div class="col-12 col-sm-6 col-md-3 col-xl-2">
         <div class="d-flex flex-column py-4 border position-relative">
+
           <a href="${course.link || '#'}" class="stretched-link"></a>
 
-          <span class="badge text-bg-primary ms-auto me-4">
-            ${course.price}
+          <span class="badge text-bg-primary py-2 px-4 ms-auto me-4">
+            ${course.price || "FREE"}
           </span>
 
-          <img src="${course.image}"
-               class="img-fluid my-4 mx-auto d-block">
+          <img src="${course.image || './public/placeholders/course.png'}"
+               class="img-fluid my-4 mx-auto d-block"
+               alt="${course.title}">
 
           <h4 class="text-center">${course.title}</h4>
 
-          <span class="d-flex justify-content-center gap-2">
-            ${getPlatformLogo(course.platform)}
-            <span>@${course.creator}</span>
+          <span class="d-flex align-items-center justify-content-center gap-2">
+            <img src="./public/logos/${course.platform}"
+                 style="height:32px"
+                 alt="${course.platform}">
+            <span class="fs-6">@${course.creator}</span>
           </span>
 
           <div class="text-warning text-center">
             ${getStars(course.rating)}
           </div>
+
         </div>
       </div>
     `;
