@@ -91,7 +91,7 @@ async function loadUpcomingEvents(limit = 3) {
 
   upcoming.forEach(event => {
     container.innerHTML += `
-            <div class="col-12 col-sm-8 col-md-4 col-xl-4">
+            <div class="col-6 col-sm-5 col-md-4 col-xl-4">
 
         <div class="d-flex flex-column bg-white py-4 px-2 border">
           <span class="badge text-bg-success ms-4">

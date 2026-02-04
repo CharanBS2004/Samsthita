@@ -23,7 +23,7 @@ async function loadAllCourses() {
 
   courses.forEach(course => {
     const card = `
-      <div class="col-12 col-sm-6 col-md-3 col-xl-2">
+      <div class="col-6 col-sm-5 col-md-3 col-xl-2">
         <div class="d-flex flex-column py-4 border position-relative">
 
           <a href="${course.link || '#'}" class="stretched-link"></a>
