@@ -26,7 +26,8 @@ document.getElementById("event-form").addEventListener("submit", async e => {
     date: e-date.value,
     technologies: e-tech.value,
     audience: e-audience.value,
-    description: e-desc.value
+    description: e-desc.value,
+    link: e-link.value
   });
   alert("Event added");
   e.target.reset();

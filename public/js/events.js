@@ -11,7 +11,8 @@ async function loadCategoryEvents(category, containerId) {
 
   events.forEach(event => {
     container.innerHTML += `
-      <div class="col">
+      <div class="col-12 col-sm-6 col-md-3 col-xl-2">
+
         <div class="d-flex flex-column bg-white py-4 px-2 border position-relative">
 
           <a href="${event.link || '#'}" class="stretched-link"></a>
@@ -20,7 +21,7 @@ async function loadCategoryEvents(category, containerId) {
             ${event.category.toUpperCase()}
           </span>
 
-          <img src="${event.image || './public/placeholders/event.png'}"
+          <img src="./public/logos/${event.image}.png"
                class="img-fluid my-4 mx-auto d-block"
                alt="${event.title}">
 

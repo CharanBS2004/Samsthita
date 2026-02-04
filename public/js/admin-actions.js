@@ -24,6 +24,7 @@ if (courseForm) {
         rating: Number(document.getElementById("c-rating").value) || 0,
         price: document.getElementById("c-price").value,
         image: document.getElementById("c-image").value,
+        link: document.getElementById("c-link").value,
         createdAt: serverTimestamp()
       });
 

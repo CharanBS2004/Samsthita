@@ -15,9 +15,11 @@ async function loadAllCourses() {
 
   const programming = document.getElementById("programming-courses");
   const web = document.getElementById("web-courses");
+  const database = document.getElementById("database-courses");
 
   programming.innerHTML = "";
   web.innerHTML = "";
+  database.innerHTML = "";
 
   courses.forEach(course => {
     const card = `
@@ -30,14 +32,19 @@ async function loadAllCourses() {
             ${course.price || "FREE"}
           </span>
 
-          <img src="${course.image || './public/placeholders/course.png'}"
-               class="img-fluid my-4 mx-auto d-block"
-               alt="${course.title}">
+          <div class="course-img-wrapper mt-3">
+  <img
+    src="./public/logos/${course.image}.png"
+    alt="${course.title}"
+    class="course-img"
+  >
+</div>
+
 
           <h4 class="text-center">${course.title}</h4>
 
           <span class="d-flex align-items-center justify-content-center gap-2">
-            <img src="./public/logos/${course.platform}"
+            <img src="./public/logos/${course.platform}.png"
                  style="height:32px"
                  alt="${course.platform}">
             <span class="fs-6">@${course.creator}</span>
@@ -57,6 +64,10 @@ async function loadAllCourses() {
 
     if (course.category === "web") {
       web.innerHTML += card;
+    }
+
+    if (course.category === "database") {
+      database.innerHTML += card;
     }
   });
 }

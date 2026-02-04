@@ -29,3 +29,16 @@ h1 {
     text-align: justify;
 }
 
+.course-img-wrapper {
+  height: 120px;                 /* SAME height for all */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.course-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;           /* keeps logo aspect ratio */
+}

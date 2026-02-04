@@ -44,14 +44,19 @@ async function loadTopRatedCourses(containerId, limit = 5) {
             ${course.price || "FREE"}
           </span>
 
-          <img src="${course.image || './public/placeholders/course.png'}"
-               class="img-fluid my-4 mx-auto d-block"
-               alt="${course.title}">
+          <div class="course-img-wrapper">
+          <img
+            src="./public/logos/${course.image}.png"
+            alt="${course.title}"
+            class="course-img"
+          >
+          </div>
+
 
           <h4 class="text-center">${course.title}</h4>
 
           <span class="d-flex align-items-center justify-content-center gap-2">
-            <img src="./public/logos/${course.platform}"
+            <img src="./public/logos/${course.platform}.png"
                  style="height:32px"
                  alt="${course.platform}">
             <span class="fs-6">@${course.creator}</span>
@@ -86,7 +91,8 @@ async function loadUpcomingEvents(limit = 3) {
 
   upcoming.forEach(event => {
     container.innerHTML += `
-      <div class="col">
+            <div class="col-12 col-sm-8 col-md-4 col-xl-4">
+
         <div class="d-flex flex-column bg-white py-4 px-2 border">
           <span class="badge text-bg-success ms-4">
             ${event.category.toUpperCase()}
