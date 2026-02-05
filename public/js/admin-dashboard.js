@@ -21,13 +21,13 @@ document.getElementById("course-form").addEventListener("submit", async e => {
 document.getElementById("event-form").addEventListener("submit", async e => {
   e.preventDefault();
   await addEvent({
-    title: e-title.value,
-    category: e-category.value,
-    date: e-date.value,
-    technologies: e-tech.value,
-    audience: e-audience.value,
-    description: e-desc.value,
-    link: e-link.value
+    title: eTitle.value,
+    category: eCategory.value,
+    date: eDate.value,
+    technologies: eTech.value,
+    audience: eAudience.value,
+    description: eDesc.value,
+    link: eLink.value
   });
   alert("Event added");
   e.target.reset();

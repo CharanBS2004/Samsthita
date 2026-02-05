@@ -90,28 +90,43 @@ async function loadUpcomingEvents(limit = 3) {
   container.innerHTML = "";
 
   upcoming.forEach(event => {
-    container.innerHTML += `
-            <div class="col-6 col-sm-5 col-md-4 col-xl-4">
+  container.innerHTML += `
+    <div class="col-12 col-sm-6 col-md-3 col-xl-2">
+        <div class="d-flex flex-column py-4 border position-relative">
 
-        <div class="d-flex flex-column bg-white py-4 px-2 border">
-          <span class="badge text-bg-success ms-4">
-            ${event.category.toUpperCase()}
-          </span>
+        <span class="badge text-bg-success py-2 px-2 me-auto ms-4">
+          ${event.category.toUpperCase()}
+        </span>
 
-          <img src="${event.image}"
-               class="img-fluid my-4 mx-auto d-block">
+        <img src="./public/logos/${event.link}.png"
+             class="course-img img-fluid mx-auto"
+             alt="${event.title}">
 
-          <h4 class="text-center">${event.title}</h4>
+        <h4 class="text-center">${event.title}</h4>
 
-          <p class="text-center">${event.description}</p>
+        <span class="d-flex ms-3 align-items-center gap-2">
+          <i class="bi bi-code-slash text-primary fs-3"></i>
+          <span class="fs-6">${event.technologies}</span>
+        </span>
 
-          <span class="fw-bold text-end me-3">
-            ${event.date}
-          </span>
-        </div>
+        <span class="d-flex ms-3 align-items-center gap-2">
+          <i class="bi bi-person text-primary fs-3"></i>
+          <span class="fs-6">${event.audience}</span>
+        </span>
+
+        <p class="text-center mt-3">
+          ${event.description}
+        </p>
+
+        <span class="fs-6 text-end fw-bold me-3">
+          ${event.date}
+        </span>
+
       </div>
-    `;
-  });
+    </div>
+  `;
+});
+
 }
 
 /* ---------- TESTIMONIALS ---------- */

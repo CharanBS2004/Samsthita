@@ -48,11 +48,13 @@ if (eventForm) {
 
     try {
       await addDoc(collection(db, "events"), {
-        title: document.getElementById("e-title").value,
-        category: document.getElementById("e-category").value,
-        date: document.getElementById("e-date").value,
-        audience: document.getElementById("e-audience").value,
-        description: document.getElementById("e-desc").value,
+        title: document.getElementById("eTitle").value,
+        category: document.getElementById("eCategory").value,
+        date: document.getElementById("eDate").value,
+        audience: document.getElementById("eAudience").value,
+        description: document.getElementById("eDesc").value,
+        technologies: document.getElementById("eTech").value,
+        link: document.getElementById("eLink").value,
         createdAt: serverTimestamp()
       });
 
