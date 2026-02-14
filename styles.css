@@ -42,3 +42,13 @@ h1 {
   max-height: 100%;
   object-fit: contain;           /* keeps logo aspect ratio */
 }
+
+.event-card {
+  width: 260px;        /* controls card size */
+  flex: 0 0 auto;      /* prevents stretching */
+}
+
+.event-card .course-img {
+  height: 120px;
+  object-fit: contain;
+}

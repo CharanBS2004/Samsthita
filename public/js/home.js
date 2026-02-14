@@ -91,40 +91,41 @@ async function loadUpcomingEvents(limit = 3) {
 
   upcoming.forEach(event => {
   container.innerHTML += `
-    <div class="col-12 col-sm-6 col-md-3 col-xl-2">
-        <div class="d-flex flex-column py-4 border position-relative">
+  <div class="event-card">
+    <div class="d-flex flex-column py-4 border position-relative h-100">
 
-        <span class="badge text-bg-success py-2 px-2 me-auto ms-4">
-          ${event.category.toUpperCase()}
-        </span>
+      <span class="badge text-bg-success py-2 px-2 me-auto ms-4">
+        ${event.category.toUpperCase()}
+      </span>
 
-        <img src="./public/logos/${event.link}.png"
-             class="course-img img-fluid mx-auto"
-             alt="${event.title}">
+      <img src="./public/logos/${event.link}.png"
+           class="course-img img-fluid mx-auto"
+           alt="${event.title}">
 
-        <h4 class="text-center">${event.title}</h4>
+      <h5 class="text-center px-2">${event.title}</h5>
 
-        <span class="d-flex ms-3 align-items-center gap-2">
-          <i class="bi bi-code-slash text-primary fs-3"></i>
-          <span class="fs-6">${event.technologies}</span>
-        </span>
+      <span class="d-flex ms-3 align-items-center gap-2">
+        <i class="bi bi-code-slash text-primary"></i>
+        <span class="fs-6">${event.technologies}</span>
+      </span>
 
-        <span class="d-flex ms-3 align-items-center gap-2">
-          <i class="bi bi-person text-primary fs-3"></i>
-          <span class="fs-6">${event.audience}</span>
-        </span>
+      <span class="d-flex ms-3 align-items-center gap-2">
+        <i class="bi bi-person text-primary"></i>
+        <span class="fs-6">${event.audience}</span>
+      </span>
 
-        <p class="text-center mt-3">
-          ${event.description}
-        </p>
+      <p class="text-center mt-2 px-2 small">
+        ${event.description}
+      </p>
 
-        <span class="fs-6 text-end fw-bold me-3">
-          ${event.date}
-        </span>
+      <span class="fs-6 text-end fw-bold me-3 mt-auto">
+        ${event.date}
+      </span>
 
-      </div>
     </div>
-  `;
+  </div>
+`;
+
 });
 
 }
