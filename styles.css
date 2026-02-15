@@ -52,3 +52,7 @@ h1 {
   height: 120px;
   object-fit: contain;
 }
+
+.bg-primary2{
+  background-color: #1100ff;
+}
